@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showRecipes: boolean = false;
   showShoppingList: boolean = false;
-  
+
   onRecipesClicked() {
     this.showRecipes = true;
     this.showShoppingList = false;
