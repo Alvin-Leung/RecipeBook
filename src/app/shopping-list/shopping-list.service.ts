@@ -13,8 +13,13 @@ export class ShoppingListService {
         return this.GetIngredientsClone();
     }
 
-    addIngredient(newIngredient) {
+    addIngredient(newIngredient: Ingredient) {
         this.ingredients.push(newIngredient);
+        this.ingredientsChanged.emit(this.GetIngredientsClone());
+    }
+
+    addIngredients(newIngredients: Ingredient[]) {
+        this.ingredients.push(...newIngredients);
         this.ingredientsChanged.emit(this.GetIngredientsClone());
     }
 
